@@ -1,0 +1,25 @@
+{
+    "name": "techsmart/currency",
+    "description": "Load and analize currency. Show charts.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Krysov",
+            "email": "igorkrysov@mail.ru"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Techsmart\\Currency\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Techsmart\\Currency\\CurrencyServiceProvider"
+            ]
+        }
+    }
+}
