@@ -16,8 +16,8 @@ class CreateCurrenciesTable extends Migration
         Schema::create('currencies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('currency', 20)->nullable();
-            $table->float('bid', 8, 5)->nullable();
-            $table->float('ask', 8, 5)->nullable();
+            $table->float('open', 8, 5)->nullable();
+            $table->float('close', 8, 5)->nullable();
             $table->dateTime('date')->nullable();
             $table->timestamps();
         });

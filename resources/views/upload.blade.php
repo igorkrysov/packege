@@ -11,13 +11,14 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <form>
-        <div class="form-group">
+      <div class="form-group">
+        <form method="POST" action="{{ route('currency.store') }}" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <label for="csv">Load CSV file</label>
-            <input type="file" class="form-control-file" id="csv">
+            <input type="file" name="file" class="form-control-file" id="csv">
             <button type="submit" class="btn btn-primary">Upload</button>
-        </div>
-    </form>
+        </form>
+      </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

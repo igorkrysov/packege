@@ -1,0 +1,1 @@
+composer remove Techsmart/Currency && composer require Techsmart/Currency && php artisan vendor:publish --tag="currency"

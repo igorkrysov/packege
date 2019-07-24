@@ -17,8 +17,8 @@
             <th scope="col">#</th>
             <th scope="col">Currency</th>
             <th scope="col">Date</th>
-            <th scope="col">Bid</th>
-            <th scope="col">Ask</th>
+            <th scope="col">Open</th>
+            <th scope="col">Close</th>
             </tr>
         </thead>
         <tbody>
@@ -27,8 +27,8 @@
                     <th scope="row">{{ $loop->index }}</th>
                     <td>{{ $currency->currency }}</td>
                     <td>{{ $currency->date }}</td>
-                    <td>{{ $currency->bid }}</td>
-                    <td>{{ $currency->ask }}</td>                    
+                    <td>{{ $currency->open }}</td>
+                    <td>{{ $currency->close }}</td>                    
                 </tr>  
             @endforeach
                       

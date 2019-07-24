@@ -1,9 +1,11 @@
 <?php
 
-Route::get('currency/upload', 'CurrencyController@upload');
+Route::group(['middleware' => 'web'], function () {
+    Route::get('currency/upload', 'Techsmart\Currency\Http\Controllers\CurrencyController@upload')->middleware('web');
 
 
-Route::post('currency/store', 'CurrencyController@store');
-
-
-Route::get('currency/{currency}', 'CurrencyController@show')->name('currency.show');
+    Route::post('currency/store', 'Techsmart\Currency\Http\Controllers\CurrencyController@store')->name('currency.store');
+    
+    
+    Route::get('currency/{currency}', 'Techsmart\Currency\Http\Controllers\CurrencyController@show')->name('currency.show');
+  });
